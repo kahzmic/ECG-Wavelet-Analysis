@@ -42,15 +42,3 @@ uv remove numpy
 ```
 
 Running `uv add` or `uv remove` automatically updates `pyproject.toml` and `uv.lock`.
-
-## Data
-
-This project uses the [MIT-BIH Arrhythmia Database](https://physionet.org/content/mitdb/1.0.0/) from PhysioNet.
-
-Download the dataset with:
-
-```bash
-wget -r -N -c -np https://physionet.org/files/mitdb/1.0.0/
-```
-
-This will create a `physionet.org/` directory containing the raw ECG recordings. The `-N` flag skips files that are already up to date, so re-running the command is safe.

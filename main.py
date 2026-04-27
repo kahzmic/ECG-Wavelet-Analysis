@@ -1,11 +1,10 @@
-import wfdb
+from src.rr_extraction import extract_rr_with_labels, plot_nn_intervals
+
+RECORD = '104'
 
 def main():
-    # Download and read a WFDB record from PhysioNet
-    record = wfdb.rdrecord('104', pn_dir='mitdb')
-
-    # Plot the signal
-    wfdb.plot_wfdb(record=record, title='Record 100 from MIT-BIH Arrhythmia Database')
+    rr_intervals, rr_labels = extract_rr_with_labels(RECORD)
+    plot_nn_intervals(rr_intervals, rr_labels, RECORD)
 
 
 if __name__ == "__main__":
